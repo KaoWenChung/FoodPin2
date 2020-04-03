@@ -39,12 +39,28 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+
         tableView.cellLayoutMarginsFollowReadableWidth = true
         
         // Set to use the large title of the navigation bar
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        if let customFont = UIFont(name: "Rubik-BoldItalic", size: 40.0){
+            navigationController?.navigationBar.largeTitleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont]
+        }
     }
 
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) ->Bool{
+//        let backButtonImage = UIImage(named: "back")
+//        UINavigationBar.appearance().backIndicatorImage = backButtonImage
+//        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backButtonImage
+//        return true
+//        }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
