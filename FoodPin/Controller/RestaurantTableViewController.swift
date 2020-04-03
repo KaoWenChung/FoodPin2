@@ -49,10 +49,11 @@ class RestaurantTableViewController: UITableViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        if let customFont = UIFont(name: "Rubik-BoldItalic", size: 40.0){
+        if let customFont = UIFont(name: "Gotu-Regular", size: 40.0){
             navigationController?.navigationBar.largeTitleTextAttributes = [
                 NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont]
         }
+        
     }
 
 //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) ->Bool{
@@ -63,6 +64,11 @@ class RestaurantTableViewController: UITableViewController {
 //        }
     // MARK: - Table view data source
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

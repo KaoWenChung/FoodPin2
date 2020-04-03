@@ -94,7 +94,9 @@
                             <outlet property="delegate" destination="iRD-QU-zyJ" id="itl-l7-TdG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FoodPin" id="vsb-U7-BqU"/>
+                    <navigationItem key="navigationItem" title="FoodPin" id="vsb-U7-BqU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gxn-os-6vw"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-f4-g1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oxH-Yl-cvi">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="fKC-JV-aZV" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -241,10 +243,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="oxH-Yl-cvi" firstAttribute="top" secondItem="q6c-GG-saN" secondAttribute="top" id="1B8-Sg-Vzu"/>
-                            <constraint firstItem="q6c-GG-saN" firstAttribute="bottom" secondItem="oxH-Yl-cvi" secondAttribute="bottom" id="2ka-2J-SW2"/>
-                            <constraint firstItem="q6c-GG-saN" firstAttribute="trailing" secondItem="oxH-Yl-cvi" secondAttribute="trailing" id="Lvg-yu-YYm"/>
-                            <constraint firstItem="oxH-Yl-cvi" firstAttribute="leading" secondItem="q6c-GG-saN" secondAttribute="leading" id="nad-wa-Y3O"/>
+                            <constraint firstItem="oxH-Yl-cvi" firstAttribute="top" secondItem="uAt-tM-3qO" secondAttribute="top" id="1B8-Sg-Vzu"/>
+                            <constraint firstAttribute="bottom" secondItem="oxH-Yl-cvi" secondAttribute="bottom" id="2ka-2J-SW2"/>
+                            <constraint firstAttribute="trailing" secondItem="oxH-Yl-cvi" secondAttribute="trailing" id="Lvg-yu-YYm"/>
+                            <constraint firstItem="oxH-Yl-cvi" firstAttribute="leading" secondItem="uAt-tM-3qO" secondAttribute="leading" id="nad-wa-Y3O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q6c-GG-saN"/>
                     </view>
