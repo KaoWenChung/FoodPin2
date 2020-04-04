@@ -32,9 +32,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.contentInsetAdjustmentBehavior = .never
 
     }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
         
@@ -42,8 +44,15 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let distinationController = segue.destination as! MapViewController
+            distinationController.restaurant = restaurant
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int { return 3 }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int { return 5 }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
@@ -65,6 +74,18 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.descrsiptionLabel.text = restaurant.description
             cell.selectionStyle = .none
 
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailSeparatorCell.self), for: indexPath) as! RestaurantDetailSeparatorCell
+            cell.titleLabel.text = "HOW TO GET HERE"
+            cell.selectionStyle = .none
+            
+            return cell
+            
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
+            cell.configure(location: restaurant.location)
+            
             return cell
             
         default:
