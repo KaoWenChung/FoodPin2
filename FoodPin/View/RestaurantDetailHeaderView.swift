@@ -10,6 +10,8 @@ import UIKit
 
 class RestaurantDetailHeaderView: UIView {
 
+    @IBOutlet var ratingImageView: UIImageView!
+    
     @IBOutlet var heartImageView: UIImageView! {
         didSet {
             heartImageView.image = UIImage(named: "heart-tick")?.withRenderingMode(.alwaysTemplate)
