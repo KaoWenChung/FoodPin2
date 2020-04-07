@@ -20,6 +20,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             self.restaurant.rating = rating
             self.headerView.ratingImageView.image = UIImage(named: rating)
             
+            // animation
             let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y:0.1)
             self.headerView.ratingImageView.transform = scaleTransform
             self.headerView.ratingImageView.alpha = 0
@@ -44,6 +45,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
         headerView.headerImageView.image = UIImage(named: restaurant.image)
+        headerView.ratingImageView.image = UIImage(named: restaurant.rating)
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false: true
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
