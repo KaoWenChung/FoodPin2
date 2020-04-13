@@ -57,7 +57,7 @@ class RestaurantTableViewController: UITableViewController, UISearchResultsUpdat
         
         // Set to use the large title of the navigation bar
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        navigationController?.hidesBarsOnSwipe = true
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
