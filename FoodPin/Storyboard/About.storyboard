@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="755" y="1327"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="Llw-JO-1zF">
             <objects>
-                <viewController id="6sO-Ur-guC" sceneMemberID="viewController">
+                <viewController id="6sO-Ur-guC" customClass="WebViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ILF-ov-C9P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,9 @@
                         <viewLayoutGuide key="safeArea" id="mXt-rR-0b5"/>
                     </view>
                     <navigationItem key="navigationItem" id="58N-iY-YPy"/>
+                    <connections>
+                        <outlet property="webView" destination="s29-mx-SpK" id="ugh-nt-Hn0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tui-lU-Cyn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
