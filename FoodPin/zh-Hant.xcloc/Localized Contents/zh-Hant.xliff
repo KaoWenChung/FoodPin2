@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="FoodPin/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.4" build-num="11E146"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>FoodPin</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSCameraUsageDescription" xml:space="preserve">
+        <source>You need to grant the app access to your camera in order to take photos.</source>
+        <note>Privacy - Camera Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSPhotoLibraryAddUsageDescription" xml:space="preserve">
+        <source>You need to grant the app access to your photo library so you can pick your favorite restaurant photo.</source>
+        <note>Privacy - Photo Library Additions Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="FoodPin/en.lproj/Localizable.strings" datatype="plaintext" source-language="en" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.4" build-num="11E146"/>
+    </header>
+    <body>
+      <trans-unit id="Camera" xml:space="preserve">
+        <source>Camera</source>
+        <note>Camera</note>
+      </trans-unit>
+      <trans-unit id="Check-in" xml:space="preserve">
+        <source>Check-in</source>
+        <note>Check-in</note>
+      </trans-unit>
+      <trans-unit id="Choose your photo source" xml:space="preserve">
+        <source>Choose your photo source</source>
+        <note>Choose your photo source</note>
+      </trans-unit>
+      <trans-unit id="Delete" xml:space="preserve">
+        <source>Delete</source>
+        <note>Delete</note>
+      </trans-unit>
+      <trans-unit id="Facebook" xml:space="preserve">
+        <source>Facebook</source>
+        <note>Facebook</note>
+      </trans-unit>
+      <trans-unit id="Feedback" xml:space="preserve">
+        <source>Feedback</source>
+        <note>Feedback</note>
+      </trans-unit>
+      <trans-unit id="Follow Us" xml:space="preserve">
+        <source>Follow Us</source>
+        <note>Follow Us</note>
+      </trans-unit>
+      <trans-unit id="HOW TO GET HERE" xml:space="preserve">
+        <source>HOW TO GET HERE</source>
+        <note>HOW TO GET HERE</note>
+      </trans-unit>
+      <trans-unit id="Instgram" xml:space="preserve">
+        <source>Instgram</source>
+        <note>Instgram</note>
+      </trans-unit>
+      <trans-unit id="Just checking in at " xml:space="preserve">
+        <source>Just checking in at </source>
+        <note>Just checking in at</note>
+      </trans-unit>
+      <trans-unit id="OK" xml:space="preserve">
+        <source>OK</source>
+        <note>OK</note>
+      </trans-unit>
+      <trans-unit id="Oops" xml:space="preserve">
+        <source>Oops</source>
+        <note>Oops</note>
+      </trans-unit>
+      <trans-unit id="Phoho library" xml:space="preserve">
+        <source>Phoho library</source>
+        <note>Photo library</note>
+      </trans-unit>
+      <trans-unit id="Rate us on App Store" xml:space="preserve">
+        <source>Rate us on App Store</source>
+        <note>Rate us on App Store</note>
+      </trans-unit>
+      <trans-unit id="Search restaurant ..." xml:space="preserve">
+        <source>Search restaurant ...</source>
+        <note>Search restaurant ...</note>
+      </trans-unit>
+      <trans-unit id="Share" xml:space="preserve">
+        <source>Share</source>
+        <note>Share</note>
+      </trans-unit>
+      <trans-unit id="Tell us your feedback" xml:space="preserve">
+        <source>Tell us your feedback</source>
+        <note>Tell us your feedback</note>
+      </trans-unit>
+      <trans-unit id="Twitter" xml:space="preserve">
+        <source>Twitter</source>
+        <note>Twitter</note>
+      </trans-unit>
+      <trans-unit id="We can't proceed because one of fields is blank. Please note that all fields are required" xml:space="preserve">
+        <source>We can't proceed because one of fields is blank. Please note that all fields are required</source>
+        <note>We can't proceed because one of fields is blank. Please note that all fields are required</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="FoodPin/Storyboard/Base.lproj/Main.storyboard" source-language="en" target-language="zh-Hant" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.4" build-num="11E146"/>
+    </header>
+    <body>
+      <trans-unit id="1sJ-Gw-Dur.text" xml:space="preserve">
+        <source>Subsection Title</source>
+        <target>Subsection Title</target>
+        <note>Class = "UILabel"; text = "Subsection Title"; ObjectID = "1sJ-Gw-Dur";</note>
+      </trans-unit>
+      <trans-unit id="4ue-ym-TsT.normalTitle" xml:space="preserve">
+        <source>Happy</source>
+        <target>Happy</target>
+        <note>Class = "UIButton"; normalTitle = "Happy"; ObjectID = "4ue-ym-TsT";</note>
+      </trans-unit>
+      <trans-unit id="9eV-GU-aPt.text" xml:space="preserve">
+        <source>Description</source>
+        <target>Description</target>
+        <note>Class = "UILabel"; text = "Description"; ObjectID = "9eV-GU-aPt";</note>
+      </trans-unit>
+      <trans-unit id="80j-RP-aCO.normalTitle" xml:space="preserve">
+        <source>Love</source>
+        <target>Love</target>
+        <note>Class = "UIButton"; normalTitle = "Love"; ObjectID = "80j-RP-aCO";</note>
+      </trans-unit>
+      <trans-unit id="ATu-IE-DIf.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "ATu-IE-DIf";</note>
+      </trans-unit>
+      <trans-unit id="Chs-i7-Vbr.title" xml:space="preserve">
+        <source>Item</source>
+        <target>Item</target>
+        <note>Class = "UITabBarItem"; title = "Item"; ObjectID = "Chs-i7-Vbr";</note>
+      </trans-unit>
+      <trans-unit id="Jl5-zG-8ld.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "Jl5-zG-8ld";</note>
+      </trans-unit>
+      <trans-unit id="L2B-e7-Aey.title" xml:space="preserve">
+        <source>Favorites</source>
+        <target>Favorites</target>
+        <note>Class = "UITabBarItem"; title = "Favorites"; ObjectID = "L2B-e7-Aey";</note>
+      </trans-unit>
+      <trans-unit id="LTf-7t-MN7.text" xml:space="preserve">
+        <source>Location</source>
+        <target>Location</target>
+        <note>Class = "UILabel"; text = "Location"; ObjectID = "LTf-7t-MN7";</note>
+      </trans-unit>
+      <trans-unit id="LX1-wX-fqA.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "LX1-wX-fqA";</note>
+      </trans-unit>
+      <trans-unit id="LbG-wo-gW9.text" xml:space="preserve">
+        <source>A great restaurant to try out</source>
+        <target>A great restaurant to try out</target>
+        <note>Class = "UITextView"; text = "A great restaurant to try out"; ObjectID = "LbG-wo-gW9";</note>
+      </trans-unit>
+      <trans-unit id="MaS-3h-TSc.placeholder" xml:space="preserve">
+        <source>FIll in your restaurant address</source>
+        <target>FIll in your restaurant address</target>
+        <note>Class = "UITextField"; placeholder = "FIll in your restaurant address"; ObjectID = "MaS-3h-TSc";</note>
+      </trans-unit>
+      <trans-unit id="NmH-u2-WPK.text" xml:space="preserve">
+        <source>TYPE</source>
+        <target>TYPE</target>
+        <note>Class = "UILabel"; text = "TYPE"; ObjectID = "NmH-u2-WPK";</note>
+      </trans-unit>
+      <trans-unit id="P04-Qa-MgP.placeholder" xml:space="preserve">
+        <source>Fill in your restaurant phone</source>
+        <target>Fill in your restaurant phone</target>
+        <note>Class = "UITextField"; placeholder = "Fill in your restaurant phone"; ObjectID = "P04-Qa-MgP";</note>
+      </trans-unit>
+      <trans-unit id="Skh-IR-Zhs.title" xml:space="preserve">
+        <source>Item</source>
+        <target>Item</target>
+        <note>Class = "UITabBarItem"; title = "Item"; ObjectID = "Skh-IR-Zhs";</note>
+      </trans-unit>
+      <trans-unit id="Zyg-Ww-xVa.normalTitle" xml:space="preserve">
+        <source>Angry</source>
+        <target>Angry</target>
+        <note>Class = "UIButton"; normalTitle = "Angry"; ObjectID = "Zyg-Ww-xVa";</note>
+      </trans-unit>
+      <trans-unit id="cJT-2I-p93.normalTitle" xml:space="preserve">
+        <source>Cool</source>
+        <target>Cool</target>
+        <note>Class = "UIButton"; normalTitle = "Cool"; ObjectID = "cJT-2I-p93";</note>
+      </trans-unit>
+      <trans-unit id="cLb-69-pk7.placeholder" xml:space="preserve">
+        <source>Fill in your restaurant name</source>
+        <target>Fill in your restaurant name</target>
+        <note>Class = "UITextField"; placeholder = "Fill in your restaurant name"; ObjectID = "cLb-69-pk7";</note>
+      </trans-unit>
+      <trans-unit id="dZO-Lz-Byb.placeholder" xml:space="preserve">
+        <source>Fill in your restaurant tyoe</source>
+        <target>Fill in your restaurant tyoe</target>
+        <note>Class = "UITextField"; placeholder = "Fill in your restaurant tyoe"; ObjectID = "dZO-Lz-Byb";</note>
+      </trans-unit>
+      <trans-unit id="dwM-ds-wI7.text" xml:space="preserve">
+        <source>Name</source>
+        <target>Name</target>
+        <note>Class = "UILabel"; text = "Name"; ObjectID = "dwM-ds-wI7";</note>
+      </trans-unit>
+      <trans-unit id="eIa-Yg-ERW.text" xml:space="preserve">
+        <source>NAME</source>
+        <target>NAME</target>
+        <note>Class = "UILabel"; text = "NAME"; ObjectID = "eIa-Yg-ERW";</note>
+      </trans-unit>
+      <trans-unit id="eNs-SV-hpR.normalTitle" xml:space="preserve">
+        <source>Sad</source>
+        <target>Sad</target>
+        <note>Class = "UIButton"; normalTitle = "Sad"; ObjectID = "eNs-SV-hpR";</note>
+      </trans-unit>
+      <trans-unit id="gxn-os-6vw.title" xml:space="preserve">
+        <source> </source>
+        <target> </target>
+        <note>Class = "UIBarButtonItem"; title = " "; ObjectID = "gxn-os-6vw";</note>
+      </trans-unit>
+      <trans-unit id="lir-33-Pai.title" xml:space="preserve">
+        <source>New Restaurant</source>
+        <target>New Restaurant</target>
+        <note>Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "lir-33-Pai";</note>
+      </trans-unit>
+      <trans-unit id="mW5-Qn-xIz.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "mW5-Qn-xIz";</note>
+      </trans-unit>
+      <trans-unit id="mda-2W-9cC.text" xml:space="preserve">
+        <source>PHONE</source>
+        <target>PHONE</target>
+        <note>Class = "UILabel"; text = "PHONE"; ObjectID = "mda-2W-9cC";</note>
+      </trans-unit>
+      <trans-unit id="naz-fw-CR5.normalTitle" xml:space="preserve">
+        <source>Rate it</source>
+        <target>Rate it</target>
+        <note>Class = "UIButton"; normalTitle = "Rate it"; ObjectID = "naz-fw-CR5";</note>
+      </trans-unit>
+      <trans-unit id="sve-S2-lSq.text" xml:space="preserve">
+        <source>Type</source>
+        <target>Type</target>
+        <note>Class = "UILabel"; text = "Type"; ObjectID = "sve-S2-lSq";</note>
+      </trans-unit>
+      <trans-unit id="vsb-U7-BqU.title" xml:space="preserve">
+        <source>FoodPin</source>
+        <target>FoodPin</target>
+        <note>Class = "UINavigationItem"; title = "FoodPin"; ObjectID = "vsb-U7-BqU";</note>
+      </trans-unit>
+      <trans-unit id="zWk-KW-xfR.text" xml:space="preserve">
+        <source>ADDRESS</source>
+        <target>ADDRESS</target>
+        <note>Class = "UILabel"; text = "ADDRESS"; ObjectID = "zWk-KW-xfR";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="FoodPin/Storyboard/FoodPin/Storyboard/Base.lproj/Discover.storyboard" source-language="en" target-language="zh-Hant" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.4" build-num="11E146"/>
+    </header>
+    <body>
+      <trans-unit id="3Gy-rP-Lg5.title" xml:space="preserve">
+        <source>Discover</source>
+        <target>Discover</target>
+        <note>Class = "UINavigationItem"; title = "Discover"; ObjectID = "3Gy-rP-Lg5";</note>
+      </trans-unit>
+      <trans-unit id="r6H-ff-rBN.title" xml:space="preserve">
+        <source>Discover</source>
+        <target>Discover</target>
+        <note>Class = "UITabBarItem"; title = "Discover"; ObjectID = "r6H-ff-rBN";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
