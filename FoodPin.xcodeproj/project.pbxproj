@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2144DF9E2446F0ED00FFFF4A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2144DF9D2446F0ED00FFFF4A /* CloudKit.framework */; };
 		21512C6424443D9C004DE03C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21512C6324443D9C004DE03C /* WebViewController.swift */; };
 		21A4750B2437876A00BE0146 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A4750A2437876A00BE0146 /* UIColor+Ext.swift */; };
 		21A4750D24378CCA00BE0146 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A4750C24378CCA00BE0146 /* UINavigationController+Ext.swift */; };
@@ -36,7 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2144DF9D2446F0ED00FFFF4A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		21512C6324443D9C004DE03C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		21512CE22446EE6C004DE03C /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
 		21A474B32436EACC00BE0146 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		21A474B42436EACC00BE0146 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		21A474B52436EACC00BE0146 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21A4751024385A5D00BE0146 /* MapKit.framework in Frameworks */,
+				2144DF9E2446F0ED00FFFF4A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +104,7 @@
 		21A4750E24385A5D00BE0146 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2144DF9D2446F0ED00FFFF4A /* CloudKit.framework */,
 				21A4750F24385A5D00BE0146 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -159,6 +164,7 @@
 		F4C333282365F91600D3A311 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				21512CE22446EE6C004DE03C /* FoodPin.entitlements */,
 				21A475092437872300BE0146 /* Extensions */,
 				21CB12B12432399800B8CC21 /* Resources */,
 				F4C333482366F24400D3A311 /* Storyboard */,
@@ -464,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QN4P34VRJ;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -482,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QN4P34VRJ;
 				INFOPLIST_FILE = FoodPin/Info.plist;
