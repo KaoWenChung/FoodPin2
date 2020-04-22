@@ -12,18 +12,18 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Page View Controller-->
+        <!--Walk Through Page View Controller-->
         <scene sceneID="WIi-LU-Toe">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="t06-J0-5zs" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkThroughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="t06-J0-5zs" customClass="WalkThroughPageViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GlN-Zt-Rn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1788" y="852"/>
+            <point key="canvasLocation" x="-1793" y="888"/>
         </scene>
-        <!--View Controller-->
+        <!--Walk Through View Controller-->
         <scene sceneID="Wyg-AT-kd0">
             <objects>
-                <viewController id="Pug-Zl-rZW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkThroughViewController" id="Pug-Zl-rZW" customClass="WalkThroughViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dtA-kW-Xwt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +56,9 @@
                                                 <state key="normal" title="NEXT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextButtonTappedWithSender:" destination="Pug-Zl-rZW" eventType="touchUpInside" id="dgm-Ft-CCm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDZ-Xa-df7">
                                                 <rect key="frame" x="78" y="127" width="34" height="33"/>
@@ -63,6 +66,9 @@
                                                 <state key="normal" title="Skip">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="skipButtonTappedWithSender:" destination="Pug-Zl-rZW" eventType="touchUpInside" id="ieS-0B-DOB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -87,6 +93,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6QI-jT-k1d"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="sL3-O0-6em" id="75D-Ey-JQE"/>
+                        <outlet property="pageControl" destination="WeM-It-ZRX" id="Be7-1g-YQF"/>
+                        <outlet property="skipButton" destination="CDZ-Xa-df7" id="Bt5-8y-jii"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka3-8S-5Sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,9 +106,9 @@
         <!--Walk Through Content View Controller-->
         <scene sceneID="8yP-GF-FUz">
             <objects>
-                <viewController id="uI0-1E-NL7" customClass="WalkThroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkThroughContentViewController" id="uI0-1E-NL7" customClass="WalkThroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eSV-Qq-YSr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="623.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="6OP-zb-nCT">

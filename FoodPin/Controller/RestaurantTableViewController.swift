@@ -260,4 +260,16 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkThrough") {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkThroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkThroughViewController") as? WalkThroughViewController {
+            present(walkThroughViewController, animated: true, completion: nil)
+        }
+    }
 }

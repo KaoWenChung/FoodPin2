@@ -8,7 +8,13 @@
 
 import UIKit
 
-class WalkThroughPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+protocol WalkThroughPageViewControllerDelegate: class {
+    func didUpdatePageIndex(currentIndex: Int)
+}
+
+class WalkThroughPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    weak var walkThroughDelegate: WalkThroughPageViewControllerDelegate?
     
     var pageHeadings = ["CREATE YOUR OWN FOOD GUIDE", "SHOW YOU THE LOCATION", "DISCOVER GREAT RESTAURANTS"]
     var pageImages = ["onboarding-1", "onboarding-2", "onboarding-3"]
@@ -20,6 +26,7 @@ class WalkThroughPageViewController: UIPageViewController, UIPageViewControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        delegate = self
         // Set data soucrce to self
         dataSource = self
         
@@ -63,5 +70,23 @@ class WalkThroughPageViewController: UIPageViewController, UIPageViewControllerD
         }
 
         return nil
+    }
+    
+    func forwardPage() {
+        currentIndex += 1
+        if let nextViewController = contentViewController(at: currentIndex) {
+            setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            if let contentViewController = pageViewController.viewControllers?.first as? WalkThroughContentViewController {
+                
+                currentIndex = contentViewController.index
+                
+                walkThroughDelegate?.didUpdatePageIndex(currentIndex: contentViewController.index)
+            }
+        }
     }
 }
