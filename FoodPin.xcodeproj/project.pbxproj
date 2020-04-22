@@ -26,6 +26,8 @@
 		21A85D7C24338AEF007E1D34 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A85D7B24338AEF007E1D34 /* RestaurantDetailIconTextCell.swift */; };
 		21A85D7E24339231007E1D34 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A85D7D24339231007E1D34 /* RestaurantDetailHeaderView.swift */; };
 		21CB12D6243245EA00B8CC21 /* Gotu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21CB12B324323A1C00B8CC21 /* Gotu-Regular.ttf */; };
+		21D1368D244FDA9600E6FF95 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D1368C244FDA9600E6FF95 /* Onboarding.storyboard */; };
+		21DF78E0244EC31F003FA0A8 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21DF78DE244EC31F003FA0A8 /* FoodPin.xcdatamodeld */; };
 		F4C3332A2365F91600D3A311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C333292365F91600D3A311 /* AppDelegate.swift */; };
 		F4C3332C2365F91600D3A311 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3332B2365F91600D3A311 /* SceneDelegate.swift */; };
 		F4C333312365F91600D3A311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C3332F2365F91600D3A311 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		21A85D7B24338AEF007E1D34 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		21A85D7D24339231007E1D34 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		21CB12B324323A1C00B8CC21 /* Gotu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotu-Regular.ttf"; sourceTree = "<group>"; };
+		21D1368C244FDA9600E6FF95 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		21DF78DF244EC31F003FA0A8 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		F4C333262365F91600D3A311 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C333292365F91600D3A311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C3332B2365F91600D3A311 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		F4C3331D2365F91600D3A311 = {
 			isa = PBXGroup;
 			children = (
+				21DF78DE244EC31F003FA0A8 /* FoodPin.xcdatamodeld */,
 				F4C333282365F91600D3A311 /* FoodPin */,
 				F4C333272365F91600D3A311 /* Products */,
 				21A4750E24385A5D00BE0146 /* Frameworks */,
@@ -222,6 +227,7 @@
 				21A475E72441C91000BE0146 /* Discover.storyboard */,
 				F4C3332F2365F91600D3A311 /* Main.storyboard */,
 				F4C333342365F91800D3A311 /* LaunchScreen.storyboard */,
+				21D1368C244FDA9600E6FF95 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 				21A475E12441C85100BE0146 /* About.storyboard in Resources */,
 				F4C333332365F91800D3A311 /* Assets.xcassets in Resources */,
 				21CB12D6243245EA00B8CC21 /* Gotu-Regular.ttf in Resources */,
+				21D1368D244FDA9600E6FF95 /* Onboarding.storyboard in Resources */,
 				F4C333312365F91600D3A311 /* Main.storyboard in Resources */,
 				21A475E92441C91000BE0146 /* Discover.storyboard in Resources */,
 			);
@@ -315,6 +322,7 @@
 				F4C3332C2365F91600D3A311 /* SceneDelegate.swift in Sources */,
 				21A4755D243C0AB700BE0146 /* RoundedTextField.swift in Sources */,
 				21A4750B2437876A00BE0146 /* UIColor+Ext.swift in Sources */,
+				21DF78E0244EC31F003FA0A8 /* FoodPin.xcdatamodeld in Sources */,
 				21A475ED244401F700BE0146 /* AboutTableTableViewController.swift in Sources */,
 				21A85D7A24333CB3007E1D34 /* RestaurantDetailViewController.swift in Sources */,
 				F4C3333E2365FAF100D3A311 /* RestaurantTableViewController.swift in Sources */,
@@ -526,6 +534,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		21DF78DE244EC31F003FA0A8 /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21DF78DF244EC31F003FA0A8 /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = 21DF78DF244EC31F003FA0A8 /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F4C3331E2365F91600D3A311 /* Project object */;
 }

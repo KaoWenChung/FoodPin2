@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    var restaurant: RestaurantMO!
+    
     @IBOutlet var nameTextField: RoundedTextField! {
         didSet{
             nameTextField.tag = 1
@@ -45,6 +48,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var saveButton: UIButton!
     @IBAction func saveButtonTapped(sender: UIBarButtonItem){
+
         if nameTextField.text == "" || typeTextField.text == "" || addressTextField.text == "" || phoneTextField.text == "" || descriptionTextView.text == "" {
             let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of fields is blank. Please note that all fields are required", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title:"OK", style: UIAlertAction.Style.default, handler: nil))
@@ -55,6 +59,24 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             print("Location: \(addressTextField.text ?? "")")
             print("Phone: \(phoneTextField.text ?? "")")
             print("Description: \(descriptionTextView.text ?? "")")
+            
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+                restaurant.name = nameTextField.text
+                restaurant.type = typeTextField.text
+                restaurant.location = addressTextField.text
+                restaurant.phone = phoneTextField.text
+                restaurant.summary = descriptionTextView.text
+                restaurant.isVisited = false
+                
+                if let restaurantImage = photoImageView.image {
+                    restaurant.image = restaurantImage.pngData()
+                }
+                
+                print("Saving data to context ...")
+                appDelegate.saveContext()
+            }
+            
             dismiss(animated: true, completion: nil)
         }
     }
