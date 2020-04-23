@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CloudKit
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -162,5 +163,41 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             nextTextField.becomeFirstResponder()
         }
         return true
+    }
+    
+    func saveRecordToCloud(restaurant:RestaurantMO) -> Void {
+        
+        // The data prepared for saving
+        let record = CKRecord(recordType: "Restaurant")
+        record.setValue(restaurant.name, forKey: "name")
+        record.setValue(restaurant.type, forKey: "type")
+        record.setValue(restaurant.location, forKey: "location")
+        record.setValue(restaurant.summary, forKey: "description")
+        record.setValue(restaurant.phone, forKey: "phone")
+        
+        let imageData = restaurant.image! as Data
+        
+        // Adjust image size
+        let originalImage = UIImage(data: imageData)!
+        let scalingFactor = (originalImage.size.width > 1024) ? 1024 / originalImage.size.width : 1.0
+        let scaledImage = UIImage(data: imageData, scale: scalingFactor)!
+        
+        // Saving image into local side for using temporarily
+        let imageFilePath = NSTemporaryDirectory() + restaurant.name!
+        let imageFileURL = URL(fileURLWithPath: imageFilePath)
+        try? scaledImage.jpegData(compressionQuality: 0.8)?.write(to: imageFileURL)
+        
+        // Create image asset for uploading
+        let imageAsset = CKAsset(fileURL: imageFileURL)
+        record.setValue(imageAsset, forKey: "image")
+        
+        // Reading public iCloud database
+        let publicDatabase = CKContainer.default().publicCloudDatabase
+        
+        // Saving data to iCloud
+        publicDatabase.save(record, completionHandler: { (record, error) -> Void in
+            // Delete temporary data
+            try? FileManager.default.removeItem(at: imageFileURL)
+        })
     }
 }
