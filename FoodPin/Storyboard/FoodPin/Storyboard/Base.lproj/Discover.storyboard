@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotu-Regular.ttf">
+            <string>Gotu-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Discover-->
         <scene sceneID="inB-WA-vsl">
@@ -15,22 +20,106 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscoverCell" textLabel="NnN-8J-CMj" style="IBUITableViewCellStyleDefault" id="4YI-ev-YAU">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscoverCell" rowHeight="415" id="4YI-ev-YAU" customClass="DiscoverTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="415"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4YI-ev-YAU" id="8jI-xo-TSL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="415"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NnN-8J-CMj">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-kE-xKJ">
+                                            <rect key="frame" x="20" y="17" width="374" height="372"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="riN-wt-exK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="qPs-dg-L8Q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hcq-dN-Zkw">
+                                                    <rect key="frame" x="0.0" y="256" width="374" height="50.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkG-Y6-P4V">
+                                                            <rect key="frame" x="0.0" y="0.0" width="127.5" height="29.5"/>
+                                                            <fontDescription key="fontDescription" name="Gotu-Regular" family="Gotu" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TypeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhP-eG-Zl1">
+                                                            <rect key="frame" x="0.0" y="31.5" width="73" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Gotu-Regular" family="Gotu" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jnJ-fw-FBa">
+                                                    <rect key="frame" x="0.0" y="312.5" width="374" height="59.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eeC-ah-Lus">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="22"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cYZ-Cx-wUs">
+                                                                    <rect key="frame" x="0.0" y="0.5" width="21" height="21"/>
+                                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="21" id="Fjd-96-ZBb"/>
+                                                                        <constraint firstAttribute="height" constant="22" id="GuK-Qd-M7i"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LocationLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8A-Dk-cs9">
+                                                                    <rect key="frame" x="26" y="0.0" width="348" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="Gotu-Regular" family="Gotu" pointSize="13"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vRk-ko-s2e">
+                                                            <rect key="frame" x="0.0" y="22" width="374" height="22"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ai7-TV-bQl">
+                                                                    <rect key="frame" x="0.0" y="0.5" width="20.5" height="20.5"/>
+                                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="20.5" id="Po8-u4-jf8"/>
+                                                                        <constraint firstAttribute="height" constant="22" id="anF-E7-5fK"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhoneLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1A-dP-94t">
+                                                                    <rect key="frame" x="25.5" y="0.0" width="348.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="Gotu-Regular" family="Gotu" pointSize="13"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqR-sC-Z6R">
+                                                            <rect key="frame" x="0.0" y="44" width="374" height="15.5"/>
+                                                            <fontDescription key="fontDescription" name="Gotu-Regular" family="Gotu" pointSize="13"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="iP6-kE-xKJ" secondAttribute="bottom" constant="5" id="DCN-TT-q3j"/>
+                                        <constraint firstItem="iP6-kE-xKJ" firstAttribute="top" secondItem="8jI-xo-TSL" secondAttribute="topMargin" constant="6" id="JFD-Kg-641"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iP6-kE-xKJ" secondAttribute="trailing" id="Lzz-HJ-wQZ"/>
+                                        <constraint firstItem="iP6-kE-xKJ" firstAttribute="leading" secondItem="8jI-xo-TSL" secondAttribute="leadingMargin" id="RFy-a4-ZYY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="aqR-sC-Z6R" id="1LL-bq-lat"/>
+                                    <outlet property="locationLabel" destination="t8A-Dk-cs9" id="fU8-dJ-Wyg"/>
+                                    <outlet property="nameLabel" destination="fkG-Y6-P4V" id="UHc-5N-4gV"/>
+                                    <outlet property="phoneLabel" destination="S1A-dP-94t" id="Nf0-tk-3pB"/>
+                                    <outlet property="restaurantImageView" destination="riN-wt-exK" id="kYp-1W-1qV"/>
+                                    <outlet property="typeLabel" destination="BhP-eG-Zl1" id="9Rv-Mt-dVa"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,7 +131,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhH-aS-tQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="640"/>
+            <point key="canvasLocation" x="779.71014492753625" y="639.50892857142856"/>
         </scene>
         <!--Discover-->
         <scene sceneID="vjb-Jv-HEK">
@@ -64,5 +153,7 @@
     </scenes>
     <resources>
         <image name="discover" width="35" height="20"/>
+        <image name="location" catalog="system" width="128" height="115"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
     </resources>
 </document>

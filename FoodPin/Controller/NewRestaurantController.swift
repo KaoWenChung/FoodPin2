@@ -78,6 +78,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                 appDelegate.saveContext()
             }
             
+            saveRecordToCloud(restaurant: restaurant)
+            
             dismiss(animated: true, completion: nil)
         }
     }

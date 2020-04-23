@@ -62,21 +62,25 @@ class DiscoverTableViewController: UITableViewController {
     }
     
     override func tableView(_ tabkeView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverCell", for: indexPath) as! DiscoverTableViewCell
         
         // Set the cell
         let restaurant = restaurants[indexPath.row]
-        cell.textLabel?.text = restaurant.object(forKey: "name") as? String
+        cell.nameLabel.text = restaurant.object(forKey: "name") as? String
+        cell.typeLabel.text = restaurant.object(forKey: "type") as? String
+        cell.locationLabel.text = restaurant.object(forKey: "location") as? String
+        cell.phoneLabel.text = restaurant.object(forKey: "phone") as? String
+        cell.descriptionLabel.text = restaurant.object(forKey: "description") as? String
         
         // Set default photo
-        cell.imageView?.image = UIImage(named: "photo")
+        cell.restaurantImageView.image = UIImage(named: "photo")
         
         // Check if the image is at cache already
         if let imageFileURL = imageCache.object(forKey: restaurant.recordID) {
             // Get image from cache
             print("Get image from cache")
             if let imageData = try? Data.init(contentsOf: imageFileURL as URL) {
-                cell.imageView?.image = UIImage(data: imageData)
+                cell.restaurantImageView.image = UIImage(data: imageData)
             }
         } else {
             // Get image from Cloudkit
@@ -98,7 +102,7 @@ class DiscoverTableViewController: UITableViewController {
                         
                         // Replace default image by restaurant image
                         DispatchQueue.main.sync {
-                            cell.imageView?.image = UIImage(data: imageData)
+                            cell.restaurantImageView?.image = UIImage(data: imageData)
                             cell.setNeedsLayout()
                         }
                         
@@ -125,10 +129,11 @@ class DiscoverTableViewController: UITableViewController {
         // Prepare for searching
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Restaurant", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
         // Create searching by query
         let queryOperation = CKQueryOperation(query: query)
-        queryOperation.desiredKeys = ["name"]
+        queryOperation.desiredKeys = ["name","type","description","location","phone"]
         queryOperation.queuePriority = .veryHigh
         queryOperation.resultsLimit = 50
         queryOperation.recordFetchedBlock = {(record) -> Void in
