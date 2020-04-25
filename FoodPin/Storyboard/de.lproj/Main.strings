@@ -1,0 +1,12 @@
+/* Class = "UILabel"; text = "Name"; ObjectID = "dwM-ds-wI7"; */
+"dwM-ds-wI7.text" = "Name";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "LTf-7t-MN7"; */
+"LTf-7t-MN7.text" = "Adresse";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "sve-S2-lSq"; */
+"sve-S2-lSq.text" = "Type";
+
+/* Class = "UINavigationItem"; title = "FoodPin"; ObjectID = "vsb-U7-BqU"; */
+"vsb-U7-BqU.title" = "FoodPin";
+

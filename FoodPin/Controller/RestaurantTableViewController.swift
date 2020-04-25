@@ -24,6 +24,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Force viewController to use light mode
+        overrideUserInterfaceStyle = .light
+        
         // Get data from cache
         let fetchRequest: NSFetchRequest<RestaurantMO> = RestaurantMO.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -51,7 +54,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search restaurant ..."
+        searchController.searchBar.placeholder = NSLocalizedString("Search restaurant ...", comment: "Search restaurant")
         searchController.searchBar.barTintColor = .white
         searchController.searchBar.backgroundImage = UIImage()
         searchController.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
@@ -62,7 +65,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         // Set to use the large title of the navigation bar
 //        navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.hidesBarsOnSwipe = true
+        navigationController?.hidesBarsOnSwipe = true
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -126,7 +129,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+        let deleteAction = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment:"Delete")) { (action, sourceView, completionHandler) in
             // Delete the row from the data source
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
                 let context = appDelegate.persistentContainer.viewContext
@@ -140,8 +143,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             completionHandler(true)
         }
         
-        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
-            let defaultText = "Just checking in at " + self.restaurants[indexPath.row].name!
+        let shareAction = UIContextualAction(style: .normal, title: NSLocalizedString("Share", comment: "Share")) { (action, sourceView, completionHandler) in
+            let defaultText = NSLocalizedString("Just checking in at ", comment: "Just checking in at") + self.restaurants[indexPath.row].name!
             
             let activityController: UIActivityViewController
             
@@ -178,7 +181,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let checkInAction = UIContextualAction(style: .normal, title: "Check-in") { (action, sourceView, completionHandler) in
+        let checkInAction = UIContextualAction(style: .normal, title: NSLocalizedString("Check-in", comment: "Check-in")) { (action, sourceView, completionHandler) in
             
             let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
             self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
@@ -271,5 +274,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         if let walkThroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkThroughViewController") as? WalkThroughViewController {
             present(walkThroughViewController, animated: true, completion: nil)
         }
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
 }

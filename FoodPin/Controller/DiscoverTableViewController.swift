@@ -18,6 +18,8 @@ class DiscoverTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.hidesBarsOnSwipe = true
+        
         spinner.style = .medium
         spinner.hidesWhenStopped = true
         view.addSubview(spinner)

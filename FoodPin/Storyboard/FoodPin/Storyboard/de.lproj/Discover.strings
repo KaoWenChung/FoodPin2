@@ -1,0 +1,21 @@
+
+/* Class = "UINavigationItem"; title = "Discover"; ObjectID = "3Gy-rP-Lg5"; */
+"3Gy-rP-Lg5.title" = "Discover";
+
+/* Class = "UILabel"; text = "TypeLabel"; ObjectID = "BhP-eG-Zl1"; */
+"BhP-eG-Zl1.text" = "TypeLabel";
+
+/* Class = "UILabel"; text = "PhoneLabel"; ObjectID = "S1A-dP-94t"; */
+"S1A-dP-94t.text" = "PhoneLabel";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "aqR-sC-Z6R"; */
+"aqR-sC-Z6R.text" = "Description";
+
+/* Class = "UILabel"; text = "NameLabel"; ObjectID = "fkG-Y6-P4V"; */
+"fkG-Y6-P4V.text" = "NameLabel";
+
+/* Class = "UITabBarItem"; title = "Discover"; ObjectID = "r6H-ff-rBN"; */
+"r6H-ff-rBN.title" = "Discover";
+
+/* Class = "UILabel"; text = "LocationLabel"; ObjectID = "t8A-Dk-cs9"; */
+"t8A-Dk-cs9.text" = "LocationLabel";
